@@ -1,3 +1,6 @@
-HTH 화이팅!!
+import random
 
-어제 삽질 죄송..x
+def ShFunction(a,b,c):
+  c= a + b 
+  return c
+   
