@@ -1,3 +1,7 @@
+def chunjae:
+  print('chae-yeon')
+  return 'bu-rup-dda'
+
 def inwoo(a, b):
     return a + b
 
