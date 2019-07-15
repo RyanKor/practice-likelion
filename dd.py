@@ -1,13 +1,6 @@
-
-def chunjae:
-  print('chae-yeon')
-  return 'bu-rup-dda'
-
-def inwoo(a, b):
-    return a + b
-
 import random
 
-def ShFunction(a,b,c):
-  c= a + b 
-  return c
+print("HTH의 즐거운 가위바위보")
+game = True
+while game:
+    user = input("가위, 바위, 보! :")
