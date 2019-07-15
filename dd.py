@@ -28,3 +28,4 @@ while game:
             game = False
         else:
             print("비겼습니다.")
+print("끝~~, 고생하셨습니다!!")
