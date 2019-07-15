@@ -1,13 +1,16 @@
+# from random import *
 
-def chunjae:
-  print('chae-yeon')
-  return 'bu-rup-dda'
+# user = input('가위바위보 입력')
 
-def inwoo(a, b):
-    return a + b
+# computer = randint(1, 3)
 
-import random
+# if computer == 1:
+#     computer = '가위'
+# elif computer == 2:
+#     computer = "바위"
+# elif computer == 3:
+#     computer ='보'
 
-def ShFunction(a,b,c):
-  c= a + b 
-  return c
+# print(computer)
+
+print("끝~~, 고생하셨습니다!!")
