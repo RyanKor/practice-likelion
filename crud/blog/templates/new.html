@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div class="new">
+    <div class="newHeader">
+        <h1>새로운 글쓰기</h1>
+    </div>
+    <div class="newContents">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="Btn">제출</button>
+        </form>
+    </div>
+    {% endblock %}
+</div>

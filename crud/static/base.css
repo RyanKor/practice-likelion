@@ -1,0 +1,93 @@
+/* base.html */
+* {
+    margin: 0%;
+    font-family: 'AppleSDGothicNeoR00';
+}
+
+.header {
+    margin: auto;
+    width: 100%;
+    height: 63vh;
+    background-image: url('./summer.jpg');
+    background-size: cover;
+    font-size: 1.3rem;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding-top: 0.8rem;
+
+}
+
+.navLogo {
+    margin-left: 1rem;
+    width: 15rem;
+    height: 7rem;
+}
+
+.navInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+    padding-right: 1rem;
+}
+
+.boardHeader {
+    width: 70%;
+    margin: 2% 10%;
+    font-size: 1.5em;
+}
+
+.boardContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(252, 250, 250);
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+
+}
+
+.boardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.col1 {
+    width: 15%;
+    text-align: center;
+}
+
+.col2 {
+    width: 9.5%;
+}
+
+.col3 {
+    width: 63%;
+}
+
+.col4 {
+    width: 12.5%;
+}
+
+.title {
+    width: 400px;
+    height: 3rem;
+    background: white;
+    border: 1px solid black;
+}
+
+.title:focus {
+    background-color: rebeccapurple;
+}
