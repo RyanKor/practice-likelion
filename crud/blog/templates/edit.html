@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div class="edit">
+    <div class="editHeader">
+        <h1>수정하기</h1>
+    </div>
+    <div class="editContents">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="Btn">수정</button>
+        </form>
+    </div>
+    {% endblock %}
+</div>
