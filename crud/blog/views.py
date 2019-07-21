@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 #######################################
 from django.contrib.auth.models import User
 from django.contrib import auth
-from .forms import PostForm
-from .models import Post
+from .forms import PostForm, CommentForm
+from .models import Post, Comment
 # Create your views here.
 
 # Home & board
@@ -27,8 +27,25 @@ def new(request):
 
 def detail(request, post_pk):
     post = Post.objects.get(pk=post_pk)
-    return render(request, 'detail.html', {'post': post})
+    # comment
+    if request.method=="POST":
+        form=CommentForm(request.POST)
+        comment=form.save(commit=False)
+        comment.author = request.user
+        comment.post = post
+        comment.save()
+        return redirect('detail', post.pk)
+    else:
+        form=CommentForm()
+    # comment
+    return render(request, 'detail.html', {'post': post, 'form': form})
 
+# delete comment
+def delete_comment(request, post_pk, comment_pk):
+    comment=Comment.objects.get(pk=comment_pk)
+    comment.delete()
+    return redirect('detail', post_pk)
+# delete comment
 
 def edit(request, post_pk):
     post = Post.objects.get(pk=post_pk)

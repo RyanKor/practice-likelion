@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Comment
 
 
 class PostForm(forms.ModelForm):
@@ -18,3 +18,16 @@ class PostForm(forms.ModelForm):
             'Contents': '본문'
         }
         # labeling : model 객체가 화면에 표시되는 이름
+
+# comment
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model=Comment
+        fields=('content',)
+        widgets = {
+            'content': forms.TextInput(attrs={'class': 'content', 'placeholder': '댓글을 달아주세요'}),
+        }
+        labels = {
+            'content': '댓글',
+        }
+
