@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 # Create your models here.
 
-
+#채연님 수정한 부분 채워넣기.
 class Post(models.Model):
     Title = models.CharField(max_length=200)
     Writer = models.CharField(max_length=100)
