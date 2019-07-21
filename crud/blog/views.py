@@ -65,7 +65,7 @@ def delete(request, post_pk):
 
 
 # Authentification 관련 #
-
+# 계정 만들기
 def signup(request):
     if request.method == "POST":
         if request.POST["password1"] == request.POST["password2"]:
@@ -78,7 +78,7 @@ def signup(request):
 
     return render(request, 'signup.html')
 
-
+# 기존에 있던 값과 비교해서 로그인 인증
 def login(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -92,7 +92,7 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-
+# 로그아웃 후 홈으로 리다이렉션
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
