@@ -28,24 +28,27 @@ def new(request):
 def detail(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     # comment
-    if request.method=="POST":
-        form=CommentForm(request.POST)
-        comment=form.save(commit=False)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        comment = form.save(commit=False)
         comment.author = request.user
         comment.post = post
         comment.save()
         return redirect('detail', post.pk)
     else:
-        form=CommentForm()
+        form = CommentForm()
     # comment
     return render(request, 'detail.html', {'post': post, 'form': form})
 
 # delete comment
+
+
 def delete_comment(request, post_pk, comment_pk):
-    comment=Comment.objects.get(pk=comment_pk)
+    comment = Comment.objects.get(pk=comment_pk)
     comment.delete()
     return redirect('detail', post_pk)
 # delete comment
+
 
 def edit(request, post_pk):
     post = Post.objects.get(pk=post_pk)
@@ -79,6 +82,8 @@ def signup(request):
     return render(request, 'signup.html')
 
 # 기존에 있던 값과 비교해서 로그인 인증
+
+
 def login(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -93,8 +98,13 @@ def login(request):
         return render(request, 'login.html')
 
 # 로그아웃 후 홈으로 리다이렉션
+
+
 def logout(request):
-    if request.method == 'POST':
-        auth.logout(request)
-        return redirect('home')
-    return render(request, 'home.html')
+    auth.logout(request)
+    return redirect('home')
+
+    # if request.method == 'POST':
+    #     auth.logout(request)
+    #     return redirect('home')
+    # return render(request, 'home.html')
