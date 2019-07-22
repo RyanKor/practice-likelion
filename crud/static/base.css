@@ -1,4 +1,5 @@
 /* base.html */
+
 * {
     margin: 0%;
     font-family: 'AppleSDGothicNeoR00';
@@ -11,7 +12,6 @@
     background-image: url('./summer.jpg');
     background-size: cover;
     font-size: 1.3rem;
-
 }
 
 .navbar {
@@ -21,21 +21,30 @@
     width: 100%;
     height: 5rem;
     padding-top: 0.8rem;
+}
 
+.navLogo_a {
+    width: 40%;
+    margin-left: 1rem;
 }
 
 .navLogo {
-    margin-left: 1rem;
-    width: 15rem;
-    height: 7rem;
+    width: 100%;
+    height: 136px;
 }
 
 .navInfo {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 15%;
+    width: 39%;
     padding-right: 1rem;
+}
+
+@media(max-width:1024px) {
+    .navInfo {
+        font-size: 5px;
+    }
 }
 
 .boardHeader {
@@ -53,7 +62,6 @@
     width: 80%;
     margin: auto;
     padding: 1rem;
-
 }
 
 .boardContent {
@@ -62,6 +70,12 @@
     align-items: center;
     font-size: 1.3rem;
     margin: 1rem 0;
+}
+
+@media(max-width:767px) {
+    .boardContent {
+        font-size: 5px;
+    }
 }
 
 .col1 {
